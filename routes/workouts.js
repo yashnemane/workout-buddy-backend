@@ -8,19 +8,20 @@ const {
 } = require('../controllers/workoutController')
 
 const router = express.Router()
+const backendBaseURL="https://workout-buddy-backend-pmfl.onrender.com"
 
 // GET all elements
-router.get('/', getWorkouts)
+router.get(`${backendBaseURL}/`, getWorkouts)
 
 //GET a single element
-router.get('/:id', getWorkout)
+router.get(`${backendBaseURL}/:id`, getWorkout)
 
 //POST a new workout
-router.post('/', createWorkout)
+router.post(`${backendBaseURL}/`, createWorkout)
 
 //DELETE  a workout
-router.delete('/:id', deleteWorkout)
+router.delete(`${backendBaseURL}/:id`, deleteWorkout)
 
 //UPDATE a workout
-router.patch('/:id', updateWorkout)
+router.patch(`${backendBaseURL}/:id`, updateWorkout)
 module.exports = router
