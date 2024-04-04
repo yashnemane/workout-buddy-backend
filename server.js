@@ -4,7 +4,7 @@ const express = require('express');
 const app = express()
 const mongoose = require('mongoose');
 const workoutRoutes = require('./routes/workouts');
-const cors = require('cors')
+const cors = require('CORS')
 
 
 //middleware
