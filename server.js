@@ -16,7 +16,7 @@ app.use((req,res,next)=>{
 
 //routes
 const backendBaseURL="https://workout-buddy-backend-pmfl.onrender.com"
-app.use(`${backendBaseURL}/api/workouts`, workoutRoutes)
+app.use('/api/workouts', workoutRoutes)
 
 //connect to db
 mongoose.connect(process.env.MONGO_URI)
