@@ -15,6 +15,7 @@ app.use(express.json())
     console.log(req.path, req.method)
     next()
 })*/
+
 app.use((req, res, next) => {
   res.setHeader(
     "Access-Control-Allow-Origin",
