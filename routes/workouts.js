@@ -10,6 +10,12 @@ const {
 const router = express.Router()
 const backendBaseURL="https://workout-buddy-backend-pmfl.onrender.com"
 
+router.use(cors({
+    allowedOrigins: [
+        '*'
+    ]
+}));
+
 // GET all elements
 router.get('/', getWorkouts)
 
