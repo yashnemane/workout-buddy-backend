@@ -9,13 +9,7 @@ const {
 
 const router = express.Router()
 const backendBaseURL="https://workout-buddy-backend-pmfl.onrender.com"
-const cors=require('express-cors');
 
-router.use(cors({
-    allowedOrigins: [
-        '*'
-    ]
-}));
 
 // GET all elements
 router.get('/', getWorkouts)
